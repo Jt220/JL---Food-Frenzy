@@ -7,6 +7,7 @@ public class HUD : MonoBehaviour
 {
 
     public Level level;
+    public GameOver gameOver;
 
     public Text remainingText;
     public Text remainingSubtext;
@@ -78,18 +79,30 @@ public class HUD : MonoBehaviour
         remainingText.text = remaining;
     }
 
-    public void SetLevelType(Level.LevelType Type)
+    public void SetLevelType(Level.LevelType type)
     {
-        //switch(type)
-        //{
-            //case Level.LevelType.MOVES:
-              //  remainingSubtext.text = "moves remaining";
-                //targetSubtext.text = "target score";
-                //break;
-            //case Level.LevelType.OBSTACLE:
-                //remainingSubtext.text = "Moves Remaining";
-                //targetSubtext.text = "Dishes Remaining";
-                //break;
+        switch (type)
+        {
+            case Level.LevelType.MOVES:
+              remainingSubtext.text = "Moves remaining";
+                targetSubtext.text = "Target score";
+                break;
+            case Level.LevelType.OBSTACLE:
+                remainingSubtext.text = "Moves Remaining";
+                targetSubtext.text = "Dishes Remaining";
+                break;
+            case Level.LevelType.TIMER:
+                remainingSubtext.text = "Time Remaining";
+                targetSubtext.text = "Target Score";
+                break;
         }
+    }
+    public void OnGameWin(int score)
+    {
+        gameOver.ShowWin(score, starIndex);
+    }
+    public void OnGameLose()
+    {
+        gameOver.ShowLose();
     }
 }

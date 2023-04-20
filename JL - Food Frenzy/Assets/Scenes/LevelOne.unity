@@ -214,7 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2b1a57bbe5e1043826c2ebc5a5e2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 0}
+  grid: {fileID: 581336197}
+  hud: {fileID: 6456523995871948595}
   score1Star: 15000
   score2Star: 18000
   score3Star: 21000
@@ -719,3 +720,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
+--- !u!114 &6456523995871948595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 795794502607141410, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
+  m_PrefabInstance: {fileID: 6456523995871948594}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641af2e257239f74785282e9dfd516b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

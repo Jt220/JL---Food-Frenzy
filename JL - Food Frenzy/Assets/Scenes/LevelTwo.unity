@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 581336197}
+  hud: {fileID: 1039234861}
   score1Star: 25000
   score2Star: 27000
   score3Star: 30000
@@ -692,3 +693,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
+--- !u!114 &1039234861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 795794502607141410, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
+  m_PrefabInstance: {fileID: 1039234860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641af2e257239f74785282e9dfd516b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
