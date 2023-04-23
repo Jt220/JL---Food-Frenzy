@@ -17,7 +17,12 @@ public class GameOver : MonoBehaviour
     {
         screenParent.SetActive(false);
 
-        for (int i = 0; i < stars.Length; i++) ;
+        for (int i = 0; i < stars.Length; i++)
+        {
+            stars[i].enabled = false;
+        }
+
+        animator = GetComponent<Animator>();
     }
     public void ShowLose()
     {
@@ -61,6 +66,7 @@ public class GameOver : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
             }
         }
+        scoreText.enabled = true;
     }
     public void OnReplayClicked()
     {
@@ -68,7 +74,7 @@ public class GameOver : MonoBehaviour
     }
     public void OnDoneClicked()
     {
-
+        SceneManager.LoadScene("LevelSelect");
     }
 
 
