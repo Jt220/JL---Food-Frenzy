@@ -63,6 +63,8 @@ public class HUD : MonoBehaviour
         starIndex = visibleStar;
 
         UpdateStars();
+
+        Debug.Log(score);
     }
 
     public void SetTarget(int target)
@@ -98,14 +100,15 @@ public class HUD : MonoBehaviour
                 break;
         }
     }
-    public void OnGameWin(int score)
+    public void OnGameWin(int Score)
     {
-        gameOver.ShowWin(score, starIndex);
+        gameOver.ShowWin(Score, starIndex);
 
         if(starIndex > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name, 0))
         {
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, starIndex);
         }
+        Debug.Log(Score);
     }
     public void OnGameLose()
     {

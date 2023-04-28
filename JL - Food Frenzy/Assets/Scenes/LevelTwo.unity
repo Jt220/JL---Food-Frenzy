@@ -222,10 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 581336197}
   hud: {fileID: 1039234861}
-  score1Star: 25000
+  score1Star: 10
   score2Star: 27000
   score3Star: 30000
-  numMoves: 10
+  scoreText: {fileID: 1107143567}
+  numMoves: 15
   obstacleTypes: 02000000
 --- !u!4 &245619826
 Transform:
@@ -607,6 +608,10 @@ PrefabInstance:
       propertyPath: level
       value: 
       objectReference: {fileID: 245619825}
+    - target: {fileID: 2898100689185583306, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4295812442543320244, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -77.000015
@@ -707,6 +712,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -77
       objectReference: {fileID: 0}
+    - target: {fileID: 8579335622916093787, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
 --- !u!114 &1039234861 stripped
@@ -718,5 +727,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 641af2e257239f74785282e9dfd516b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1107143567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5338642258548037505, guid: 519cf515611a0fc479d7a8ab13d00ef5, type: 3}
+  m_PrefabInstance: {fileID: 1039234860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

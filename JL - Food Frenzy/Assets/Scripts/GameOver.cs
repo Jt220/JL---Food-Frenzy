@@ -47,12 +47,13 @@ public class GameOver : MonoBehaviour
         {
             animator.Play("GameOverDisplay");
         }
+        Debug.Log(score);
 
         StartCoroutine(ShowWinCoroutine(starCount));
     }
     private IEnumerator ShowWinCoroutine(int starCount)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
         if(starCount < stars.Length)
         {

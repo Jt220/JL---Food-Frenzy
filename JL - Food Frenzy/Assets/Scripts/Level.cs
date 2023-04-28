@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
@@ -18,6 +20,10 @@ public class Level : MonoBehaviour
     public int score2Star;
     public int score3Star;
 
+    private int score2;
+
+    public Text scoreText;
+
     protected LevelType type;
 
     public LevelType Type
@@ -33,6 +39,7 @@ public class Level : MonoBehaviour
     private void Start()
     {
         hud.SetScore(currentScore);
+        
     }
 
     // Update is called once per frame
@@ -63,9 +70,9 @@ public class Level : MonoBehaviour
     public virtual void OnPieceCleared(GamePiece piece)
     {
         //Update Score
-        currentScore += piece.score;
-
+        currentScore = currentScore + piece.score;
         hud.SetScore(currentScore);
+        Debug.Log(currentScore);
     }
 
     protected virtual IEnumerator WaitForGridFill()
@@ -76,13 +83,19 @@ public class Level : MonoBehaviour
         }
 
         if(didWin && !grid.IsFilling)
-        {
-            hud.OnGameWin(currentScore);
+        { 
+            hud.SetScore(currentScore);
+            Invoke("DelayGameWin", 1f);
+            Debug.Log("passed");
         }
         else
         {
             hud.OnGameLose();
         }
 
+    }
+    public void DelayGameWin()
+    {
+        hud.OnGameWin(currentScore);
     }
 }
