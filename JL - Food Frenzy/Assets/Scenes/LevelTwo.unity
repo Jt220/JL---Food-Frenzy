@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 581336197}
   hud: {fileID: 1039234861}
-  score1Star: 10
+  score1Star: 25000
   score2Star: 27000
   score3Star: 30000
   scoreText: {fileID: 1107143567}
